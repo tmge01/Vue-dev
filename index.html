@@ -5,17 +5,20 @@
     <meta charset="utf-8">
     <title></title>
 
-    <link rel="stylesheet" href="../Vue/CSS/style.css">
+    <link rel="stylesheet" href="CSS/style.css">
 </head>
 
 <body>
     <div class="frame">
-        <h1 class="frame__title">現在の秒数を表示</h1>
+        <h1 class="frame__title">現在の時間を表示する</h1>
 
         <div class="frame__inner">
             <script>
                 const today = new Date();
-                document.write(today.getSeconds())
+                const hour = today.getHours();
+                const min = today.getMinutes();
+                const sec = today.getSeconds();
+                document.write(`現在の時刻は　${hour}時 ${min}分 ${sec}秒です。`);
             </script>
         </div>
     </div>
